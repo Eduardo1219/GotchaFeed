@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Post.Repost.Entity
+namespace Domain.Gotcha.Entity
 {
-    [Table("Repost")]
-    public class RepostEntity : BaseEntity
+    [Table("Gotcha")]
+    public class GotchaEntity : BaseEntity
     {
-        public Guid PostId { get; set; }
         public Guid UserId { get; set; }
-        public DateTime RepostDate { get; set; }
-        public string RepostContent {  get; set; }
+        public string Description {  get; set; }
+        public int RepostQnt {  get; set; }
+        public DateTime PostDate { get; set; }
     }
 }

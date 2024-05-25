@@ -1,9 +1,9 @@
 ﻿using Domain.BaseMongo.Repository;
 using Domain.BaseMongo.Settings;
-using Domain.Post.Repository;
-using Domain.Post.Repost.Repository;
-using Domain.Post.Repost.Service;
-using Domain.Post.Service;
+using Domain.Gotcha.Repository;
+using Domain.Gotcha.Repost.Repository;
+using Domain.Gotcha.Repost.Service;
+using Domain.Gotcha.Service;
 using Domain.Users.Repository;
 using Domain.Users.Service;
 using Infraestructure.Context;
@@ -23,7 +23,7 @@ namespace GotchaFeed.DomainInjection
             ConfigureContext(services, configuration);
             ConfigureMongo(services, configuration);
             ConfigureUsers(services);
-            ConfigurePost(services);
+            ConfigureGotcha(services);
             ConfigureRepost(services);
 
             return services;
@@ -48,10 +48,10 @@ namespace GotchaFeed.DomainInjection
             services.AddScoped<IUsersService, UsersService>();
         }
 
-        public static void ConfigurePost(this IServiceCollection services)
+        public static void ConfigureGotcha(this IServiceCollection services)
         {
-            services.AddScoped<IPostRepository, PostRepository>();
-            services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IGotchaRepository, GotchaRepository>();
+            services.AddScoped<IGotchaService, GotchaService>();
         }
 
         public static void ConfigureRepost(this IServiceCollection services)

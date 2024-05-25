@@ -1,14 +1,14 @@
-﻿using Domain.Post.Entity;
-using GotchaFeed.Controllers.Posts.Dto;
+﻿using Domain.Gotcha.Entity;
+using GotchaFeed.Controllers.Gotcha.Dto;
 
 namespace GotchaFeed.Helpers.Mappers
 {
-    public static class PostMapper
+    public static class GotchaMapper
     {
 
-        public static PostEntity MapperPost(this PostsDto dto)
+        public static GotchaEntity MapperPost(this GotchaDto dto)
         {
-            return new PostEntity
+            return new GotchaEntity
             {
                 Description = dto.Description,
                 RepostQnt = 0,

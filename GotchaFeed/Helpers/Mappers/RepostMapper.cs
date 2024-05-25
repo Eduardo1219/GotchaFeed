@@ -1,4 +1,4 @@
-﻿using Domain.Post.Repost.Entity;
+﻿using Domain.Gotcha.Repost.Entity;
 using GotchaFeed.Controllers.Repost.Dto;
 
 namespace GotchaFeed.Helpers.Mappers

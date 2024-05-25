@@ -1,14 +1,7 @@
-﻿using Domain.Post.Repost.Entity;
-using Domain.Post.Repost.Repository;
-using Domain.Users.Entity;
-using Domain.Users.Repository;
+﻿using Domain.Gotcha.Repost.Entity;
+using Domain.Gotcha.Repost.Repository;
 using Infraestructure.Context;
 using Infraestructure.Repository.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infraestructure.Repository.RepostRepository
 {

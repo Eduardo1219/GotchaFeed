@@ -1,7 +1,5 @@
-﻿using Domain.Post.Repost.Service;
-using Domain.Users.Service;
+﻿using Domain.Gotcha.Repost.Service;
 using GotchaFeed.Controllers.Repost.Dto;
-using GotchaFeed.Controllers.Users.Dto;
 using GotchaFeed.Helpers.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;

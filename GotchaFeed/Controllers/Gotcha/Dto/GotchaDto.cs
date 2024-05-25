@@ -1,10 +1,9 @@
-﻿using Domain.Post.Entity;
-using FluentValidation;
+﻿using FluentValidation;
 using System.Text.Json.Serialization;
 
-namespace GotchaFeed.Controllers.Posts.Dto
+namespace GotchaFeed.Controllers.Gotcha.Dto
 {
-    public class PostsDto
+    public class GotchaDto
     {
         /// <summary>
         /// User Id
@@ -19,7 +18,7 @@ namespace GotchaFeed.Controllers.Posts.Dto
         public string Description { get; set; }
     }
 
-    public class UserValidator : AbstractValidator<PostsDto>
+    public class UserValidator : AbstractValidator<GotchaDto>
     {
         public UserValidator()
         {

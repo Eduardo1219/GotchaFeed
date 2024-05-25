@@ -1,12 +1,7 @@
-﻿using Domain.Post.Repost.Entity;
-using Domain.Post.Repost.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Gotcha.Repost.Entity;
+using Domain.Gotcha.Repost.Repository;
 
-namespace Domain.Post.Repost.Service
+namespace Domain.Gotcha.Repost.Service
 {
     public class RepostService : IRepostService
     {
