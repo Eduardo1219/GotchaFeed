@@ -18,5 +18,10 @@ namespace Domain.Gotcha.Service
         {
             await _repository.AddAsync(entity);
         }
+
+        public async Task<GotchaEntity> GetById(Guid id)
+        {
+            return await _repository.GetByIdAsync(id);
+        }
     }
 }

@@ -6,14 +6,14 @@ namespace GotchaFeed.Helpers.Mappers
     public static class GotchaMapper
     {
 
-        public static GotchaEntity MapperPost(this GotchaDto dto)
+        public static GotchaEntity MapperGotcha(this GotchaDto dto)
         {
             return new GotchaEntity
             {
-                Description = dto.Description,
+                Content = dto.Description,
                 RepostQnt = 0,
                 UserId = dto.UserId,
-                PostDate = DateTime.UtcNow.AddHours(-3)
+                CreationDate = DateTime.UtcNow.AddHours(-3)
             };
         }
     }

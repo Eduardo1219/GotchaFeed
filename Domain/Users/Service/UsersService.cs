@@ -21,5 +21,10 @@ namespace Domain.Users.Service
         {
             await _repository.AddAsync(users);
         }
+
+        public async Task<UsersEntity> GetById(Guid id)
+        {
+            return await _repository.GetByIdAsync(id);
+        }
     }
 }

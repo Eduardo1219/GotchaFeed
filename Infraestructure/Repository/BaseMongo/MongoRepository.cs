@@ -29,6 +29,11 @@ namespace Infraestructure.Repository.BaseMongo
             return await _model.Find<T>(m => m.Id == id).FirstOrDefaultAsync();
         }
 
+        public virtual async Task<T> GetFirstAsync()
+        {
+            return await _model.Find<T>(g => true).FirstOrDefaultAsync();
+        }
+
         public virtual async Task<T> GetAsync(Expression<Func<T, bool>> search)
         {
             return await _model.Find<T>(search).FirstOrDefaultAsync();

@@ -10,5 +10,6 @@ namespace Domain.Users.Service
     public interface IUsersService
     {
         Task AddAsync(UsersEntity users);
+        Task<UsersEntity> GetById(Guid id);
     }
 }

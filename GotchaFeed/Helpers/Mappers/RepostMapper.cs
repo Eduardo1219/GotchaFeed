@@ -9,7 +9,7 @@ namespace GotchaFeed.Helpers.Mappers
         {
             return new RepostEntity
             {
-                PostId = dto.PostId,
+                PostId = dto.GotchaId,
                 RepostContent = dto.RepostContent,
                 RepostDate = dto.RepostDate,
                 UserId = dto.UserId,

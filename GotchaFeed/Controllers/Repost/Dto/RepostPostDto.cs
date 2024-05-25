@@ -9,7 +9,7 @@ namespace GotchaFeed.Controllers.Repost.Dto
         /// Post Id
         /// </summary>
         [JsonPropertyName("repostContent")]
-        public Guid PostId { get; set; }
+        public Guid GotchaId { get; set; }
         
         /// <summary>
         /// User Id
@@ -38,7 +38,7 @@ namespace GotchaFeed.Controllers.Repost.Dto
                 .NotNull().WithMessage("repostContent must not be null")
                 .NotEmpty().WithMessage("repostContent must not be empty");
 
-            RuleFor(x => x.PostId)
+            RuleFor(x => x.GotchaId)
                 .NotNull().WithMessage("post Id must not be null")
                 .NotEmpty().WithMessage("post Id must not be empty");
 
