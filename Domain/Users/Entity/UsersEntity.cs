@@ -13,9 +13,9 @@ namespace Domain.Users.Entity
     {
         public string Name { get; set; }
         public string LastName { get; set; }
+        public string Nickname { get; set; }
         public DateTime CreationDate { get; set; }
         public string Email { get; set; }
-        public string Nickname { get; set; }
         public int PostsDay {  get; set; }
         public bool Active {  get; set; }
         public DateTime BirthDate { get; set; }
