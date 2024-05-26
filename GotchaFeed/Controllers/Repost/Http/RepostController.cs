@@ -19,9 +19,15 @@ namespace GotchaFeed.Controllers.Repost.Http
         private readonly IUsersService _usersService;
         private readonly IFeedService _feedService;
 
-        public RepostController(IRepostService repostService)
+        public RepostController(IRepostService service, 
+            IGotchaService gotchaService, 
+            IUsersService usersService, 
+            IFeedService feedService)
         {
-            _service = repostService;
+            _service = service;
+            _gotchaService = gotchaService;
+            _usersService = usersService;
+            _feedService = feedService;
         }
 
         /// <summary>

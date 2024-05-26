@@ -6,22 +6,16 @@ namespace GotchaFeed.Controllers.Repost.Dto
     public class RepostPostDto
     {
         /// <summary>
-        /// Post Id
+        /// Gotcha Id
         /// </summary>
-        [JsonPropertyName("repostContent")]
+        [JsonPropertyName("gotchaId")]
         public Guid GotchaId { get; set; }
         
         /// <summary>
         /// User Id
         /// </summary>
-        [JsonPropertyName("repostContent")]
+        [JsonPropertyName("userId")]
         public Guid UserId { get; set; }
-        
-        /// <summary>
-        /// Repost Date
-        /// </summary>
-        [JsonPropertyName("repostContent")]
-        public DateTime RepostDate { get; set; }
 
         /// <summary>
         /// Repost Content
@@ -45,10 +39,6 @@ namespace GotchaFeed.Controllers.Repost.Dto
             RuleFor(x => x.UserId)
                 .NotNull().WithMessage("user Id must not be null")
                 .NotEmpty().WithMessage("user Id must not be empty");
-
-            RuleFor(x => x.RepostDate)
-                .NotNull().WithMessage("repost date must not be null")
-                .NotEmpty().WithMessage("repost date must not be empty");
         }
     }
 }

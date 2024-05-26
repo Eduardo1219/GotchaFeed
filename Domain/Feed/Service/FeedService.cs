@@ -40,7 +40,11 @@ namespace Domain.Feed.Service
             var currentFeed = await _repository.GetFirstAsync();
             if (currentFeed != null) return currentFeed;
 
-            return new FeedEntity { Feed = new List<FeedGotcha>() };
+            var newFeed = new FeedEntity { Feed = new List<FeedGotcha>() };
+
+            await _repository.AddAsync(newFeed);
+
+            return newFeed;
         }
     }
 }

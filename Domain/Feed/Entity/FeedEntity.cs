@@ -35,9 +35,10 @@ namespace Domain.Feed.Entity
 
         public void AddRepost(RepostEntity repost, GotchaEntity gotcha, UsersEntity user)
         {
-            var currentGotcha = this.Feed.FindIndex(g => g.GotchaId == gotcha.Id);
-            this.Feed[currentGotcha].QntdRepost += 1;
-            
+            var repostedGotcha = this.Feed.FirstOrDefault(g => g.GotchaId == gotcha.Id);
+            var idxReposted = this.Feed.FindIndex(g => g.GotchaId == gotcha.Id);
+            this.Feed[idxReposted].QntdRepost += 1;
+
             var gotchaEntity = new FeedGotcha
             {
                 Content = repost.RepostContent,
@@ -50,13 +51,13 @@ namespace Domain.Feed.Entity
                 UserNickname = user.Nickname,
                 RepostedGotcha = new FeedRepostedGotcha
                 {
-                    Content = gotcha.Content,
-                    CrationDate = gotcha.CreationDate,
-                    GotchaId = gotcha.Id,
-                    UserLastName = user.LastName,
-                    UserName = user.Name,
-                    UserNickname = user.Nickname,
-                    UserId = user.Id
+                    Content = repostedGotcha.Content,
+                    CrationDate = repostedGotcha.CrationDate,
+                    GotchaId = repostedGotcha.GotchaId,
+                    UserLastName = repostedGotcha.UserLastName,
+                    UserName = repostedGotcha.UserName,
+                    UserNickname = repostedGotcha.UserNickname,
+                    UserId = repostedGotcha.UserId
                 }
             };
 

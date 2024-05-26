@@ -11,7 +11,7 @@ namespace GotchaFeed.Helpers.Mappers
             {
                 PostId = dto.GotchaId,
                 RepostContent = dto.RepostContent,
-                RepostDate = dto.RepostDate,
+                RepostDate = DateTime.UtcNow.AddHours(-3),
                 UserId = dto.UserId,
             };
         }

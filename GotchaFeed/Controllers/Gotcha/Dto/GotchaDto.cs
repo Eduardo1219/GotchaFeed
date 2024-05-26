@@ -8,7 +8,7 @@ namespace GotchaFeed.Controllers.Gotcha.Dto
         /// <summary>
         /// User Id
         /// </summary>
-        [JsonPropertyName("repostContent")]
+        [JsonPropertyName("userId")]
         public Guid UserId { get; set; }
 
         /// <summary>
