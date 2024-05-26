@@ -35,7 +35,7 @@ namespace Domain.Feed.Service
             await _repository.UpdateAsync(feed);
         }
 
-        private async Task<FeedEntity> GetCurrentFeed()
+        public async Task<FeedEntity> GetCurrentFeed()
         {
             var currentFeed = await _repository.GetFirstAsync();
             if (currentFeed != null) return currentFeed;

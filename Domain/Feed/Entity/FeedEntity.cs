@@ -21,7 +21,7 @@ namespace Domain.Feed.Entity
             var gotchaEntity = new FeedGotcha
             {
                 Content = gotcha.Content,
-                CrationDate = gotcha.CreationDate,
+                CreationDate = gotcha.CreationDate,
                 GotchaId = gotcha.Id,
                 IsRepost = false,
                 UserId = gotcha.UserId,
@@ -42,7 +42,7 @@ namespace Domain.Feed.Entity
             var gotchaEntity = new FeedGotcha
             {
                 Content = repost.RepostContent,
-                CrationDate = repost.RepostDate,
+                CreationDate = repost.RepostDate,
                 GotchaId = repost.Id,
                 IsRepost = true,
                 UserId = repost.UserId,
@@ -52,7 +52,7 @@ namespace Domain.Feed.Entity
                 RepostedGotcha = new FeedRepostedGotcha
                 {
                     Content = repostedGotcha.Content,
-                    CrationDate = repostedGotcha.CrationDate,
+                    CreationDate = repostedGotcha.CreationDate,
                     GotchaId = repostedGotcha.GotchaId,
                     UserLastName = repostedGotcha.UserLastName,
                     UserName = repostedGotcha.UserName,
@@ -71,7 +71,7 @@ namespace Domain.Feed.Entity
         public Guid Id { get; set; } = Guid.NewGuid();
         public Guid UserId { get; set; }
         public Guid GotchaId { get; set; }
-        public DateTime CrationDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public string UserName { get; set; }
         public string UserLastName { get; set; }
         public string UserNickname { get; set; }
@@ -87,7 +87,7 @@ namespace Domain.Feed.Entity
         public Guid Id { get; set; } = Guid.NewGuid();
         public Guid UserId { get; set; }
         public Guid GotchaId { get; set; }
-        public DateTime CrationDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public string UserName { get; set; }
         public string UserLastName { get; set; }
         public string UserNickname { get; set; }

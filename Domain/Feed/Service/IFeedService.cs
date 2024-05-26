@@ -1,4 +1,5 @@
-﻿using Domain.Gotcha.Entity;
+﻿using Domain.Feed.Entity;
+using Domain.Gotcha.Entity;
 using Domain.Gotcha.Repost.Entity;
 using Domain.Users.Entity;
 using System;
@@ -13,5 +14,6 @@ namespace Domain.Feed.Service
     {
         Task UpdateFeed(GotchaEntity gotcha, UsersEntity user);
         Task UpdateFeed(RepostEntity repost, GotchaEntity gotcha, UsersEntity user);
+        Task<FeedEntity> GetCurrentFeed();
     }
 }
