@@ -11,12 +11,14 @@ namespace Domain.Base.Repository
     public interface IBaseRepository<TB> where TB : BaseEntity
     {
         Task AddAsync(TB entity);
+        Task AddManyAsync(List<TB> entity);
 
         Task RemoveAsync(TB entity);
 
         Task RemoveByIdAsync(Guid id);
 
         Task UpdateAsync(TB entity);
+        Task UpdateManyAsync(List<TB> entity);
 
         Task<TB> GetByIdAsync(Guid id);
 

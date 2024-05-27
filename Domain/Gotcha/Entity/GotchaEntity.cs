@@ -12,8 +12,8 @@ namespace Domain.Gotcha.Entity
     public class GotchaEntity : BaseEntity
     {
         public Guid UserId { get; set; }
-        public string Description {  get; set; }
+        public string Content {  get; set; }
         public int RepostQnt {  get; set; }
-        public DateTime PostDate { get; set; }
+        public DateTime CreationDate { get; set; }
     }
 }

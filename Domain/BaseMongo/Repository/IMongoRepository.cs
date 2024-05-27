@@ -23,5 +23,6 @@ namespace Domain.BaseMongo.Repository
         Task<TB> GetAsync(Expression<Func<TB, bool>> search);
 
         Task<TB> GetByIdAsync(Guid id);
+        Task<TB> GetFirstAsync();
     }
 }

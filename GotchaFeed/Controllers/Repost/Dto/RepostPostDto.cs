@@ -6,22 +6,16 @@ namespace GotchaFeed.Controllers.Repost.Dto
     public class RepostPostDto
     {
         /// <summary>
-        /// Post Id
+        /// Gotcha Id
         /// </summary>
-        [JsonPropertyName("repostContent")]
-        public Guid PostId { get; set; }
+        [JsonPropertyName("gotchaId")]
+        public Guid GotchaId { get; set; }
         
         /// <summary>
         /// User Id
         /// </summary>
-        [JsonPropertyName("repostContent")]
+        [JsonPropertyName("userId")]
         public Guid UserId { get; set; }
-        
-        /// <summary>
-        /// Repost Date
-        /// </summary>
-        [JsonPropertyName("repostContent")]
-        public DateTime RepostDate { get; set; }
 
         /// <summary>
         /// Repost Content
@@ -30,25 +24,22 @@ namespace GotchaFeed.Controllers.Repost.Dto
         public string RepostContent { get; set; }
     }
 
-    public class UserValidator : AbstractValidator<RepostPostDto>
+    public class RepostValidator : AbstractValidator<RepostPostDto>
     {
-        public UserValidator()
+        public RepostValidator()
         {
             RuleFor(x => x.RepostContent)
                 .NotNull().WithMessage("repostContent must not be null")
-                .NotEmpty().WithMessage("repostContent must not be empty");
+                .NotEmpty().WithMessage("repostContent must not be empty")
+                .MaximumLength(777).WithMessage("repostContent should not be more than 777 characters");
 
-            RuleFor(x => x.PostId)
+            RuleFor(x => x.GotchaId)
                 .NotNull().WithMessage("post Id must not be null")
                 .NotEmpty().WithMessage("post Id must not be empty");
 
             RuleFor(x => x.UserId)
                 .NotNull().WithMessage("user Id must not be null")
                 .NotEmpty().WithMessage("user Id must not be empty");
-
-            RuleFor(x => x.RepostDate)
-                .NotNull().WithMessage("repost date must not be null")
-                .NotEmpty().WithMessage("repost date must not be empty");
         }
     }
 }
