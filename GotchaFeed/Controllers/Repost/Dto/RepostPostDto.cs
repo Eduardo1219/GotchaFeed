@@ -24,13 +24,14 @@ namespace GotchaFeed.Controllers.Repost.Dto
         public string RepostContent { get; set; }
     }
 
-    public class UserValidator : AbstractValidator<RepostPostDto>
+    public class RepostValidator : AbstractValidator<RepostPostDto>
     {
-        public UserValidator()
+        public RepostValidator()
         {
             RuleFor(x => x.RepostContent)
                 .NotNull().WithMessage("repostContent must not be null")
-                .NotEmpty().WithMessage("repostContent must not be empty");
+                .NotEmpty().WithMessage("repostContent must not be empty")
+                .MaximumLength(777).WithMessage("repostContent should not be more than 777 characters");
 
             RuleFor(x => x.GotchaId)
                 .NotNull().WithMessage("post Id must not be null")

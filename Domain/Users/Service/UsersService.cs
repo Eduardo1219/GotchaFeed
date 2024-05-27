@@ -26,5 +26,33 @@ namespace Domain.Users.Service
         {
             return await _repository.GetByIdAsync(id);
         }
+
+        public async Task<UsersEntity> GetByNickname(string nickname)
+        {
+            return await _repository.GetFirstAsync(u => u.Nickname.ToLower() == nickname.ToLower());
+        }
+
+        public async Task UpdateLastAccessAsync(UsersEntity user)
+        {
+            user.UpdateLastAccess();
+            await _repository.UpdateAsync(user);
+        }
+
+        public async Task IncrementPostsDay(UsersEntity user)
+        {
+            user.IncrementPostsDay();
+            await _repository.UpdateAsync(user);
+        }
+
+        public async Task<List<UsersEntity>> UsersWithPostsQnt()
+        {
+            var users = await _repository.GetAsync(u => u.PostsDay > 0);
+            return users.ToList();
+        }
+
+        public async Task UpdateManyAsync(List<UsersEntity> user)
+        {
+            await _repository.UpdateManyAsync(user);
+        }
     }
 }

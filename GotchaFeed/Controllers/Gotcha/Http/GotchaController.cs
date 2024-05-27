@@ -1,8 +1,10 @@
 ﻿using Domain.Feed.Service;
 using Domain.Gotcha.Service;
+using Domain.Schedule;
 using Domain.Users.Service;
 using GotchaFeed.Controllers.Gotcha.Dto;
 using GotchaFeed.Helpers.Mappers;
+using Hangfire;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -43,12 +45,17 @@ namespace GotchaFeed.Controllers.Gotcha.Http
             var user = await _usersService.GetById(dto.UserId);
 
             if (user == null)
-                return StatusCode(StatusCodes.Status400BadRequest, "User Not Found");
+                return StatusCode(StatusCodes.Status404NotFound, "User Not Found");
+
+            if (user.PostsDay >= 5)
+                return StatusCode(StatusCodes.Status400BadRequest, "User reached daily gotcha limit");
 
             var gotcha = dto.MapperGotcha();
             await _service.AddAsync(gotcha);
 
             await _feedService.UpdateFeed(gotcha, user);
+
+            BackgroundJob.Enqueue<ISchedule>(s => s.IncrementPostsDay(user));
 
             return StatusCode(StatusCodes.Status201Created);
         }

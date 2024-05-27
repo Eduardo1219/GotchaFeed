@@ -31,6 +31,7 @@ namespace GotchaFeed.Controllers.Feed.Http
         public async Task<IActionResult> Get()
         {
             var currentFeed = await _feedService.GetCurrentFeed();
+            currentFeed.Feed = currentFeed.Feed.OrderByDescending(x => x.CreationDate).ToList();
 
             return StatusCode(StatusCodes.Status200OK, currentFeed);
         }

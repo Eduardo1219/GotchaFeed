@@ -17,5 +17,11 @@ namespace Domain.Gotcha.Repost.Service
         {
             await _repository.AddAsync(entity);
         }
+
+
+        public async Task<RepostEntity> GetRepostByUserIdAndGotchaId(Guid userId, Guid gotchaId)
+        {
+            return await _repository.GetFirstAsync(r => r.UserId == userId && r.PostId == gotchaId);
+        }
     }
 }

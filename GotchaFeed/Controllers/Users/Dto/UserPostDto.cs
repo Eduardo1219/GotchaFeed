@@ -64,24 +64,10 @@ namespace GotchaFeed.Controllers.Users.Dto
                 .NotEmpty().WithMessage("nickname must not be empty");
 
             RuleFor(x => x.BirthDate)
-                .NotNull().WithMessage("birthDate must not be null")
-                .Must(ValidDate).WithMessage("User should not be a minor");
+                .NotNull().WithMessage("birthDate must not be null");
 
             RuleFor(x => x.Active)
                 .NotNull().WithMessage("status must not be null");
-        }
-
-        private bool ValidDate(DateTime date)
-        {
-            var currentDate = DateTime.UtcNow.AddHours(-3);
-
-            if (date.AddYears(18).Year > currentDate.Year)
-                return false;
-
-            if ((currentDate.Month < date.Month || (currentDate.Month == date.Month && currentDate.Day < date.Day)) && date.AddYears(18).Year == currentDate.Year)
-                return false;
-
-            return true;
         }
     }
 }

@@ -58,6 +58,14 @@ namespace Infraestructure.Repository.Base
             await _context.SaveChangesAsync();
         }
 
+        public virtual async Task UpdateManyAsync(List<B> entity)
+        {
+            var dbSet = _context.Set<B>();
+            dbSet.UpdateRange(entity);
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<IList<B>> GetPagedAsync(Expression<Func<B, bool>> search, int take, int skip, Expression<Func<B, dynamic>> orderDesc)
         {
             return await _context.Set<B>()

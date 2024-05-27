@@ -18,13 +18,14 @@ namespace GotchaFeed.Controllers.Gotcha.Dto
         public string Description { get; set; }
     }
 
-    public class UserValidator : AbstractValidator<GotchaDto>
+    public class GotchaValidator : AbstractValidator<GotchaDto>
     {
-        public UserValidator()
+        public GotchaValidator()
         {
             RuleFor(x => x.Description)
-                .NotNull().WithMessage("description must not be null")
-                .NotEmpty().WithMessage("description must not be empty");
+                .NotNull().WithMessage("content must not be null")
+                .NotEmpty().WithMessage("content must not be empty")
+                .MaximumLength(777).WithMessage("content should not be more than 777 characters");
 
             RuleFor(x => x.UserId)
                 .NotNull().WithMessage("user Id must not be null")

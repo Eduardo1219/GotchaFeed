@@ -6,6 +6,8 @@ using Domain.Gotcha.Repository;
 using Domain.Gotcha.Repost.Repository;
 using Domain.Gotcha.Repost.Service;
 using Domain.Gotcha.Service;
+using Domain.Schedule.ScheduleCron;
+using Domain.Schedule;
 using Domain.Users.Repository;
 using Domain.Users.Service;
 using Infraestructure.Context;
@@ -29,6 +31,7 @@ namespace GotchaFeed.DomainInjection
             ConfigureGotcha(services);
             ConfigureRepost(services);
             ConfigureFeed(services);
+            ConfigureJobs(services);
 
             return services;
         }
@@ -68,6 +71,12 @@ namespace GotchaFeed.DomainInjection
         {
             services.AddScoped<IFeedRepository, FeedRepository>();
             services.AddScoped<IFeedService, FeedService>();
+        }
+
+        public static void ConfigureJobs(this IServiceCollection services)
+        {
+            services.AddTransient<ISchedule, ScheduleService>();
+            services.AddTransient<IScheduleCronService, ScheduleCronService>();
         }
     }
 }

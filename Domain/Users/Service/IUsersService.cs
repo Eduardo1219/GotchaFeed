@@ -11,5 +11,10 @@ namespace Domain.Users.Service
     {
         Task AddAsync(UsersEntity users);
         Task<UsersEntity> GetById(Guid id);
+        Task<UsersEntity> GetByNickname(string nickname);
+        Task UpdateLastAccessAsync(UsersEntity user);
+        Task IncrementPostsDay(UsersEntity user);
+        Task<List<UsersEntity>> UsersWithPostsQnt();
+        Task UpdateManyAsync(List<UsersEntity> user);
     }
 }

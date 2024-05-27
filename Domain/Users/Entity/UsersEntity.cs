@@ -21,5 +21,20 @@ namespace Domain.Users.Entity
         public DateTime BirthDate { get; set; }
         public DateTime? LastAccessDate { get; set; }
 
+
+        public void UpdateLastAccess()
+        {
+            this.LastAccessDate = DateTime.UtcNow.AddHours(-3);
+        }
+
+        public void IncrementPostsDay()
+        {
+            this.PostsDay += 1;
+        }
+
+        public void ResetPostsDay()
+        {
+            this.PostsDay = 0;
+        }
     }
 }

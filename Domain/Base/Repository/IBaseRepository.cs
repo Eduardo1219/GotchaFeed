@@ -17,6 +17,7 @@ namespace Domain.Base.Repository
         Task RemoveByIdAsync(Guid id);
 
         Task UpdateAsync(TB entity);
+        Task UpdateManyAsync(List<TB> entity);
 
         Task<TB> GetByIdAsync(Guid id);
 
