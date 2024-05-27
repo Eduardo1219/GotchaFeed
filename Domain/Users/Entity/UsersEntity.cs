@@ -20,6 +20,7 @@ namespace Domain.Users.Entity
         public bool Active {  get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime? LastAccessDate { get; set; }
+        public string ImgBase64 { get; set; }
 
 
         public void UpdateLastAccess()

@@ -4,6 +4,7 @@ using Infraestructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestructure.Migrations
 {
     [DbContext(typeof(GotchaFeedContext))]
-    partial class GotchaFeedContextModelSnapshot : ModelSnapshot
+    [Migration("20240527185422_SeedAll")]
+    partial class SeedAll
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,162 +51,162 @@ namespace Infraestructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("98687f30-e119-4463-a306-e7e2fe9df544"),
+                            Id = new Guid("d266314f-31c4-4421-8623-17468424fea2"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3403),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2077),
+                            RepostQnt = 10,
                             UserId = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354")
                         },
                         new
                         {
-                            Id = new Guid("1fb63c07-c689-4096-871b-a7940f9e3d7a"),
+                            Id = new Guid("af6b344a-bf4c-44eb-94b7-754a2b4ed71a"),
                             Content = "Another interesting gotcha!",
-                            CreationDate = new DateTime(2024, 5, 25, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3408),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 25, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2085),
+                            RepostQnt = 20,
                             UserId = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354")
                         },
                         new
                         {
-                            Id = new Guid("961f45f0-f5f9-4915-b32e-f6778862985d"),
+                            Id = new Guid("d436694b-2fc8-495e-9f23-1eeba70f6d70"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3413),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2088),
+                            RepostQnt = 10,
                             UserId = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354")
                         },
                         new
                         {
-                            Id = new Guid("fd1537ba-61ee-42c2-9284-d2012b844750"),
+                            Id = new Guid("e91861f2-4f1b-4759-8cd2-67fdb15049fb"),
                             Content = "Yet another gotcha post for you.",
-                            CreationDate = new DateTime(2024, 4, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3415),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 4, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2091),
+                            RepostQnt = 15,
                             UserId = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354")
                         },
                         new
                         {
-                            Id = new Guid("2bc444d1-4a52-4fbf-8208-3e1b9785ed05"),
+                            Id = new Guid("691d3a33-66ec-45e7-8c11-85cc28be380b"),
                             Content = "Last but not least, this gotcha!",
-                            CreationDate = new DateTime(2023, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3418),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2023, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2094),
+                            RepostQnt = 25,
                             UserId = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354")
                         },
                         new
                         {
-                            Id = new Guid("9dc2afad-c7c5-43c9-b9ed-ae0fe6aee3c2"),
+                            Id = new Guid("f3ef7ea9-ad0e-4d5f-a417-da4b4a4edcec"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3423),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2103),
+                            RepostQnt = 10,
                             UserId = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f")
                         },
                         new
                         {
-                            Id = new Guid("518e3e45-fbc3-4c0d-9a6c-8a9dc8c4ac1c"),
+                            Id = new Guid("f12b1436-deb1-4d48-8a9b-7e3baafbb000"),
                             Content = "Another interesting gotcha!",
-                            CreationDate = new DateTime(2024, 5, 25, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3427),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 25, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2104),
+                            RepostQnt = 20,
                             UserId = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f")
                         },
                         new
                         {
-                            Id = new Guid("73a9a8db-cd15-476b-af61-854c35bbbf92"),
+                            Id = new Guid("941ee39a-1fb6-4740-adeb-06b4674353b7"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3428),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2106),
+                            RepostQnt = 10,
                             UserId = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f")
                         },
                         new
                         {
-                            Id = new Guid("976e0afd-beb4-4ccc-8952-e9b068ebffb1"),
+                            Id = new Guid("73f80851-4179-4d57-ab10-411a343cb47c"),
                             Content = "Yet another gotcha post for you.",
-                            CreationDate = new DateTime(2024, 4, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3430),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 4, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2108),
+                            RepostQnt = 15,
                             UserId = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f")
                         },
                         new
                         {
-                            Id = new Guid("38cf2ad4-30ac-46e2-9240-ca3e82250002"),
+                            Id = new Guid("58039889-aad1-46c2-9629-2712dfb7a06f"),
                             Content = "Last but not least, this gotcha!",
-                            CreationDate = new DateTime(2023, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3433),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2023, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2112),
+                            RepostQnt = 25,
                             UserId = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f")
                         },
                         new
                         {
-                            Id = new Guid("638c2a44-f6e4-41ef-8136-4dbecbfd4472"),
+                            Id = new Guid("f7ddac1c-7308-4e24-8af5-5f60c7a212ab"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3437),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2114),
+                            RepostQnt = 10,
                             UserId = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c")
                         },
                         new
                         {
-                            Id = new Guid("3b0303f0-ff85-4dd2-bd16-6cccea758914"),
+                            Id = new Guid("66e74488-264e-441c-8fbc-89ff91add7fb"),
                             Content = "Another interesting gotcha!",
-                            CreationDate = new DateTime(2024, 5, 25, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3438),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 25, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2116),
+                            RepostQnt = 20,
                             UserId = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c")
                         },
                         new
                         {
-                            Id = new Guid("2a69ff19-f466-4c9b-8a2c-b8f5080b6208"),
+                            Id = new Guid("bd380514-1bef-41a6-84c5-d60a59a934b3"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3440),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2118),
+                            RepostQnt = 10,
                             UserId = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c")
                         },
                         new
                         {
-                            Id = new Guid("3f309c24-fa8c-4a73-9cd5-67348ce43bc1"),
+                            Id = new Guid("ff23f696-7d00-49a9-b862-2a8b9ccb8fa6"),
                             Content = "Yet another gotcha post for you.",
-                            CreationDate = new DateTime(2024, 4, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3442),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 4, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2121),
+                            RepostQnt = 15,
                             UserId = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c")
                         },
                         new
                         {
-                            Id = new Guid("52098a53-8925-42f0-be7d-95c40c7599fb"),
+                            Id = new Guid("b8e06c8e-8b3b-4b44-89fe-a65dbcff4a59"),
                             Content = "Last but not least, this gotcha!",
-                            CreationDate = new DateTime(2023, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3445),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2023, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2123),
+                            RepostQnt = 25,
                             UserId = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c")
                         },
                         new
                         {
-                            Id = new Guid("45a65064-ca61-4134-b1eb-790cffe074d0"),
+                            Id = new Guid("c4f092b8-e38d-498e-9ebb-bd1132fbb5a0"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3447),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2125),
+                            RepostQnt = 10,
                             UserId = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29")
                         },
                         new
                         {
-                            Id = new Guid("b8bf6c5f-c110-459e-a80c-54325897efc7"),
+                            Id = new Guid("2043a6e8-8fee-455f-b051-a91302e83199"),
                             Content = "Another interesting gotcha!",
-                            CreationDate = new DateTime(2024, 5, 25, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3449),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 25, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2127),
+                            RepostQnt = 20,
                             UserId = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29")
                         },
                         new
                         {
-                            Id = new Guid("8d08cf02-f060-410d-8ad6-9b9e4e75b6ff"),
+                            Id = new Guid("fd9f73d1-02e8-4821-9bbb-4fba31df02e3"),
                             Content = "This is the first gotcha content.",
-                            CreationDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3451),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(2131),
+                            RepostQnt = 10,
                             UserId = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29")
                         },
                         new
                         {
-                            Id = new Guid("32816f48-9944-4a86-b991-a5b529454e2e"),
+                            Id = new Guid("2868e482-3269-4e3e-87de-182f2ccf9549"),
                             Content = "Yet another gotcha post for you.",
-                            CreationDate = new DateTime(2024, 4, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3455),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2024, 4, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2133),
+                            RepostQnt = 15,
                             UserId = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29")
                         },
                         new
                         {
-                            Id = new Guid("b703c185-b4ee-4f6c-b738-9b4f359cb849"),
+                            Id = new Guid("8e9b1587-08dd-46f5-b1e6-37acf2af36b9"),
                             Content = "Last but not least, this gotcha!",
-                            CreationDate = new DateTime(2023, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3456),
-                            RepostQnt = 0,
+                            CreationDate = new DateTime(2023, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(2135),
+                            RepostQnt = 25,
                             UserId = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29")
                         });
                 });
@@ -283,10 +286,10 @@ namespace Infraestructure.Migrations
                             Id = new Guid("6cdf691d-db36-4f9d-b567-2173d8431354"),
                             Active = true,
                             BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2022, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3301),
+                            CreationDate = new DateTime(2022, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1900),
                             Email = "john.doe@example.com",
                             ImgBase64 = "6cdf691d-db36-4f9d-b567-2173d8431354.jpg",
-                            LastAccessDate = new DateTime(2024, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3318),
+                            LastAccessDate = new DateTime(2024, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1925),
                             LastName = "Doe",
                             Name = "John",
                             Nickname = "johnny",
@@ -297,10 +300,10 @@ namespace Infraestructure.Migrations
                             Id = new Guid("fba74d07-310a-4e3a-b689-bb129fbe566f"),
                             Active = true,
                             BirthDate = new DateTime(1985, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3327),
+                            CreationDate = new DateTime(2023, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1940),
                             Email = "jane.smith@example.com",
                             ImgBase64 = "fba74d07-310a-4e3a-b689-bb129fbe566f.jpg",
-                            LastAccessDate = new DateTime(2024, 5, 26, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3328),
+                            LastAccessDate = new DateTime(2024, 5, 26, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1941),
                             LastName = "Smith",
                             Name = "Jane",
                             Nickname = "janeS",
@@ -311,10 +314,10 @@ namespace Infraestructure.Migrations
                             Id = new Guid("0e3ee3ef-a250-436b-bae6-754e2685b18c"),
                             Active = true,
                             BirthDate = new DateTime(1992, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 11, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3334),
+                            CreationDate = new DateTime(2023, 11, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1951),
                             Email = "alice.johnson@example.com",
                             ImgBase64 = "0e3ee3ef-a250-436b-bae6-754e2685b18c.jpg",
-                            LastAccessDate = new DateTime(2024, 4, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3337),
+                            LastAccessDate = new DateTime(2024, 4, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1955),
                             LastName = "Johnson",
                             Name = "Alice",
                             Nickname = "aliceJ",
@@ -325,10 +328,10 @@ namespace Infraestructure.Migrations
                             Id = new Guid("b09a4ec4-0cea-45fb-b992-a94208837d29"),
                             Active = true,
                             BirthDate = new DateTime(1988, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2021, 5, 27, 17, 36, 51, 76, DateTimeKind.Local).AddTicks(3340),
+                            CreationDate = new DateTime(2021, 5, 27, 15, 54, 21, 716, DateTimeKind.Local).AddTicks(1965),
                             Email = "bob.brown@example.com",
                             ImgBase64 = "b09a4ec4-0cea-45fb-b992-a94208837d29.jpg",
-                            LastAccessDate = new DateTime(2024, 5, 27, 12, 36, 51, 76, DateTimeKind.Local).AddTicks(3342),
+                            LastAccessDate = new DateTime(2024, 5, 27, 10, 54, 21, 716, DateTimeKind.Local).AddTicks(1966),
                             LastName = "Brown",
                             Name = "Bob",
                             Nickname = "bobby",

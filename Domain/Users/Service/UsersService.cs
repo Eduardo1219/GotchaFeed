@@ -22,6 +22,11 @@ namespace Domain.Users.Service
             await _repository.AddAsync(users);
         }
 
+        public async Task AddManyAsync(List<UsersEntity> users)
+        {
+            await _repository.AddManyAsync(users);
+        }
+
         public async Task<UsersEntity> GetById(Guid id)
         {
             return await _repository.GetByIdAsync(id);
@@ -53,6 +58,12 @@ namespace Domain.Users.Service
         public async Task UpdateManyAsync(List<UsersEntity> user)
         {
             await _repository.UpdateManyAsync(user);
+        }
+
+        public async Task<int> GetCounAsync()
+        {
+            var user = await _repository.GetFirstAsync(u => !string.IsNullOrEmpty(u.Name));
+            return user  != null ? 1 : 0;
         }
     }
 }

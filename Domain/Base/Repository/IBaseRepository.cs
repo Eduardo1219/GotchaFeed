@@ -11,6 +11,7 @@ namespace Domain.Base.Repository
     public interface IBaseRepository<TB> where TB : BaseEntity
     {
         Task AddAsync(TB entity);
+        Task AddManyAsync(List<TB> entity);
 
         Task RemoveAsync(TB entity);
 

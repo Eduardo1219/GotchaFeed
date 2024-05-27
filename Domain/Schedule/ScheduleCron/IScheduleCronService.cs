@@ -9,5 +9,6 @@ namespace Domain.Schedule.ScheduleCron
     public interface IScheduleCronService
     {
         Task ResetUsersPostsQnt();
+        Task FeedDatabase();
     }
 }

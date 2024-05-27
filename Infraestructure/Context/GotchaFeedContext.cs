@@ -1,7 +1,10 @@
 ﻿using Domain.Gotcha.Entity;
 using Domain.Gotcha.Repost.Entity;
+using Domain.MockData.Gotchas;
+using Domain.MockData.Users;
 using Domain.Users.Entity;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Infraestructure.Context
 {
@@ -17,6 +20,8 @@ namespace Infraestructure.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UsersEntity>().HasData(UsersMock.GetMockUsers());
+            modelBuilder.Entity<GotchaEntity>().HasData(GotchaMock.GetGotchaMock());
         }
     }
 }

@@ -1,3 +1,4 @@
+using Domain.Schedule;
 using Domain.Schedule.ScheduleCron;
 using FluentValidation;
 using FluentValidation.AspNetCore;

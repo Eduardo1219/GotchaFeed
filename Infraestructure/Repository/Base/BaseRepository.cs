@@ -21,6 +21,13 @@ namespace Infraestructure.Repository.Base
             await _context.SaveChangesAsync();
         }
 
+        public virtual async Task AddManyAsync(List<B> entity)
+        {
+            var dbSet = _context.Set<B>();
+            dbSet.AddRange(entity);
+            await _context.SaveChangesAsync();
+        }
+
         public virtual async Task<B> GetByIdAsync(Guid id)
         {
             var dbSet = _context.Set<B>();

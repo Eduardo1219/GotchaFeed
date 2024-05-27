@@ -28,6 +28,7 @@ namespace Domain.Feed.Entity
                 UserLastName = user.LastName,
                 UserName = user.Name,
                 UserNickname = user.Nickname,
+                UserImg = user.ImgBase64,
             };
 
             this.Feed.Add(gotchaEntity);
@@ -49,6 +50,7 @@ namespace Domain.Feed.Entity
                 UserLastName = user.LastName,
                 UserName = user.Name,
                 UserNickname = user.Nickname,
+                UserImg = user.ImgBase64,
                 RepostedGotcha = new FeedRepostedGotcha
                 {
                     Content = repostedGotcha.Content,
@@ -57,6 +59,7 @@ namespace Domain.Feed.Entity
                     UserLastName = repostedGotcha.UserLastName,
                     UserName = repostedGotcha.UserName,
                     UserNickname = repostedGotcha.UserNickname,
+                    UserImg = repostedGotcha.UserImg,
                     UserId = repostedGotcha.UserId
                 }
             };
@@ -75,6 +78,7 @@ namespace Domain.Feed.Entity
         public string UserName { get; set; }
         public string UserLastName { get; set; }
         public string UserNickname { get; set; }
+        public string UserImg { get; set; }
         public string Content { get; set; }
         public int QntdRepost { get; set; }
         public bool IsRepost { get; set; }
@@ -91,6 +95,7 @@ namespace Domain.Feed.Entity
         public string UserName { get; set; }
         public string UserLastName { get; set; }
         public string UserNickname { get; set; }
+        public string UserImg { get; set; }
         public string Content { get; set; }
     }
 }

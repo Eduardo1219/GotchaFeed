@@ -6,5 +6,6 @@ namespace Domain.Gotcha.Service
     {
         Task AddAsync(GotchaEntity entity);
         Task<GotchaEntity> GetById(Guid id);
+        Task AddManyAsync(List<GotchaEntity> entity);
     }
 }
